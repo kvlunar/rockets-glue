@@ -1,0 +1,13 @@
+{
+  "implementations": {
+    "@riddance/service": {
+      "implementation": "@riddance/aws-host",
+      "version": "0.1.2"
+    }
+  },
+  "services": {
+    "event-facade": {
+      "publish": ["rocket"]
+    }
+  }
+}
