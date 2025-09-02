@@ -3,11 +3,20 @@
     "@riddance/service": {
       "implementation": "@riddance/aws-host",
       "version": "0.1.2"
+    },
+    "@riddance/docs": {
+      "implementation": "@riddance/dynamodb-docs",
+      "version": "0.0.1"
     }
   },
   "services": {
     "event-facade": {
       "publish": ["rocket"]
+    },
+    "dashboard": {
+      "env": {
+        "TABLE_PREFIX": "$ENV.$SERVICE."
+      }
     }
   }
 }
